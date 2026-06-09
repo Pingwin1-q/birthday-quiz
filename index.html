@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>С Днём Рождения</title>
+  <meta name="description" content="Эксклюзивный квиз ко дню рождения">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient ambient-1" aria-hidden="true"></div>
+  <div class="ambient ambient-2" aria-hidden="true"></div>
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <main class="app">
+    <header class="brand" aria-hidden="true">
+      <span class="brand-line"></span>
+      <span class="brand-text">Birthday Edition</span>
+      <span class="brand-line"></span>
+    </header>
+
+    <!-- Приветствие -->
+    <section class="screen active" id="screen-welcome">
+      <div class="card card-hero">
+        <p class="eyebrow">Эксклюзивное приглашение</p>
+        <h1 class="display-title">С Днём<br>Рождения</h1>
+        <p class="lead">Тебя ждёт <em>официальный</em> квиз от твоей любимой девушки</p>
+        <p class="fine-print">* официальность не гарантируется, зато веселье — да</p>
+        <button class="btn btn-gold" id="btn-start">
+          <span>Начать приключение</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Квиз -->
+    <section class="screen" id="screen-quiz">
+      <div class="card">
+        <div class="progress-wrap">
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <span class="progress-label" id="step-label">01 / 11</span>
+        </div>
+        <p class="step-tag" id="step-tag">Вопрос</p>
+        <h2 class="question-text" id="question-text"></h2>
+        <div class="answers" id="answers"></div>
+        <p class="reaction" id="reaction" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- Мини-игра -->
+    <section class="screen" id="screen-minigame">
+      <div class="card">
+        <div class="progress-wrap">
+          <div class="progress-track">
+            <div class="progress-fill" id="minigame-progress-fill"></div>
+          </div>
+          <span class="progress-label" id="minigame-step-label">01 / 11</span>
+        </div>
+        <p class="step-tag step-tag-game" id="minigame-tag">Мини-игра</p>
+        <h2 class="question-text" id="minigame-prompt"></h2>
+        <div class="minigame-visual" id="minigame-visual"></div>
+        <div class="minigame-buckets" id="minigame-buckets"></div>
+        <div class="minigame-sort" id="minigame-sort"></div>
+        <div class="answers" id="minigame-answers"></div>
+        <p class="reaction" id="minigame-reaction" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- Колесо -->
+    <section class="screen" id="screen-wheel">
+      <div class="card card-wheel">
+        <p class="eyebrow">Финальный розыгрыш</p>
+        <h2 class="section-title">Колесо Фортуны</h2>
+        <p class="wheel-intro">Ты прошла все вопросы и мини-игры. Крути колесо и узнай свой приз.</p>
+        <p class="wheel-hint">спойлер: колесо очень щедрое</p>
+
+        <div class="wheel-stage">
+          <div class="wheel-rim">
+            <div class="wheel-pointer" aria-hidden="true">
+              <div class="pointer-body"></div>
+              <div class="pointer-tip"></div>
+            </div>
+            <canvas id="wheel-canvas" width="400" height="400"></canvas>
+            <div class="wheel-hub" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <button class="btn btn-gold btn-spin" id="btn-spin" disabled>
+          <span>Крутить колесо</span>
+        </button>
+        <p class="spin-status" id="spin-status">Подготовка колеса…</p>
+      </div>
+    </section>
+
+    <!-- Приз -->
+    <section class="screen" id="screen-prize">
+      <div class="card card-prize">
+        <div class="prize-badge">Победитель</div>
+        <p class="eyebrow">Твой приз</p>
+        <h1 class="prize-title" id="prize-title">ОСАГО на машину</h1>
+        <p class="prize-subtitle" id="prize-subtitle"></p>
+
+        <div class="certificate-wrap" id="certificate">
+          <!-- Полис встроен inline — всегда загружается -->
+          <div class="certificate">
+            <div class="cert-border-outer"></div>
+            <div class="cert-border-inner"></div>
+            <div class="cert-content">
+              <p class="cert-brand">ОФИЦИАЛЬНО* СТРАХОВАНИЕ</p>
+              <p class="cert-brand-sub">*официальность по договорённости сторон</p>
+              <h3 class="cert-title">ПОЛИС</h3>
+              <p class="cert-subtitle">ОСАГО — АВТОСТРАХОВАНИЕ</p>
+              <div class="cert-icon">🚗</div>
+              <dl class="cert-fields">
+                <div class="cert-row">
+                  <dt>Страхователь</dt>
+                  <dd>Самая лучшая девушка на свете</dd>
+                </div>
+                <div class="cert-row">
+                  <dt>Объект страхования</dt>
+                  <dd>Любимый автомобиль</dd>
+                </div>
+                <div class="cert-row">
+                  <dt>Покрытие</dt>
+                  <dd>Всё, что угодно + любовь навсегда</dd>
+                </div>
+                <div class="cert-row">
+                  <dt>Срок действия</dt>
+                  <dd>Бессрочно (пока люблю)</dd>
+                </div>
+                <div class="cert-row">
+                  <dt>Номер полиса</dt>
+                  <dd class="cert-number">LOVE-2026-∞</dd>
+                </div>
+              </dl>
+              <div class="cert-stamp">
+                <span>УТВЕРЖДЕНО</span>
+                <span class="cert-stamp-sub">С ЛЮБОВЬЮ</span>
+              </div>
+              <div class="cert-signature">
+                <div class="cert-sign-line"></div>
+                <p>Твоя любимая девушка</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="prize-message" id="prize-message"></p>
+        <button class="btn btn-ghost" id="btn-replay">Пройти ещё раз</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="footer-line"></span>
+    <p>Сделано с любовью, специально для тебя</p>
+    <span class="footer-line"></span>
+  </footer>
+
+  <script src="js/app.js?v=3"></script>
+</body>
+</html>

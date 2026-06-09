@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff9e6"/>
+      <stop offset="100%" style="stop-color:#fff3cc"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffd700"/>
+      <stop offset="50%" style="stop-color:#ffec8b"/>
+      <stop offset="100%" style="stop-color:#ffd700"/>
+    </linearGradient>
+  </defs>
+
+  <!-- $>= -->
+  <rect width="600" height="400" fill="url(#bg)" rx="8"/>
+  <rect x="8" y="8" width="584" height="384" fill="none" stroke="url(#gold)" stroke-width="4" rx="6"/>
+  <rect x="16" y="16" width="568" height="368" fill="none" stroke="#c9a227" stroke-width="1" rx="4"/>
+
+  <!-- 5:>@ -->
+  <circle cx="50" cy="50" r="30" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.5"/>
+  <circle cx="550" cy="350" r="40" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.5"/>
+
+  <!-- >3>B8? -->
+  <text x="300" y="55" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#8b6914" letter-spacing="3">$&,* !" %</text>
+  <text x="300" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#999">*>D8F80;L=>ABL ?> 4>3>2>@Q==>AB8 AB>@>=</text>
+
+  <!-- 03>;>2>: -->
+  <text x="300" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#1a3a5c">!</text>
+  <text x="300" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#2c5282">", !" %/</text>
+
+  <!-- 0H8=:0 -->
+  <text x="300" y="185" text-anchor="middle" font-size="48">=—</text>
+
+  <!-- 0==K5 -->
+  <text x="80" y="220" font-family="Arial, sans-serif" font-size="12" fill="#555">!B@0E>20B5;L:</text>
+  <text x="200" y="220" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1a3a5c">!0<0O ;CGH0O 452CH:0 =0 A25B5</text>
+
+  <text x="80" y="248" font-family="Arial, sans-serif" font-size="12" fill="#555">1J5:B AB@0E>20=8O:</text>
+  <text x="200" y="248" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1a3a5c">N18<K9 02B><>18;L</text>
+
+  <text x="80" y="276" font-family="Arial, sans-serif" font-size="12" fill="#555">>:@KB85:</text>
+  <text x="200" y="276" font-family="Arial, sans-serif" font-size="14" fill="#1a3a5c">AQ, GB> C3>4=> + ;N1>2L =02A5340</text>
+
+  <text x="80" y="304" font-family="Arial, sans-serif" font-size="12" fill="#555">!@>: 459AB28O:</text>
+  <text x="200" y="304" font-family="Arial, sans-serif" font-size="14" fill="#1a3a5c">5AA@>G=> (?>:0 ;N1;N)</text>
+
+  <text x="80" y="332" font-family="Arial, sans-serif" font-size="12" fill="#555">><5@ ?>;8A0:</text>
+  <text x="200" y="332" font-family="Arial, sans-serif" font-size="14" font-family="monospace" fill="#1a3a5c">LOVE-2026-</text>
+
+  <!-- 5G0BL -->
+  <circle cx="480" cy="310" r="45" fill="none" stroke="#c0392b" stroke-width="3" opacity="0.7"/>
+  <text x="480" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c0392b" font-weight="bold">#" </text>
+  <text x="480" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c0392b">! .,. d</text>
+
+  <!-- >4?8AL -->
+  <line x1="80" y1="370" x2="220" y2="370" stroke="#333" stroke-width="1"/>
+  <text x="150" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">"2>9 ;N18<K9 G5;>25:</text>
+</svg>

@@ -117,7 +117,7 @@ const TOTAL_STEPS = STEPS.length;
 const WHEEL_PRIZES = [
   { label: 'Пылесос Dyson', sub: 'для салона', color1: '#8B2942', color2: '#5C1A2E' },
   { label: 'Chanel №5', sub: '50 мл', color1: '#2C3E6B', color2: '#1A2540' },
-  { label: 'Starbucks', sub: 'на год', color1: '#1B5E3B', color2: '#0F3D26' },
+  { label: 'Бензин', sub: 'на весь год', color1: '#1B5E3B', color2: '#0F3D26' },
   { label: 'Apple AirPods', sub: 'Pro 3', color1: '#4A3060', color2: '#2E1D3D' },
   { label: 'СПА-уикенд', sub: 'в Сочи', color1: '#6B4423', color2: '#4A2F18' },
   { label: 'ОСАГО', sub: 'на машину!', color1: '#C41E5A', color2: '#8B1538', winner: true },
